@@ -60,7 +60,7 @@ def BdiceDB():
         cotacao_baixa = '0.17'
 
         # MENSAGEM A SER EXIBIDA FORMATADA
-        message = (f'Cotação: {valor}\nPorcentagem: {porcentagem}\nAlta: {alta}\nBaixa: {baixa}\nHorario da cotação: {data_final}')
+        message = f'Cotação: {valor}\nPorcentagem: {porcentagem}\nAlta: {alta}\nBaixa: {baixa}\nHorario da cotação: {data_final}'
         
         # INSERÇÃO DE VALOR NO BANCO DE DADOS
         c.execute(f'''insert into `criptos_coins`.`dados_coins` (`cotacao`, `porcentagem`, `alta`, `baixa`, `data_cotacao`) values ('{valor}', '{porcentagem}', '{alta}', '{baixa}', '{data_final}');''')
