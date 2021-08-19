@@ -11,10 +11,11 @@ from bs4 import BeautifulSoup
 
 # CONEXÃO COM O BANCO DE DADOS
 con = pymysql.connect(
-    host='localhost', 
-    user='root', 
+    host='35.247.240.81',
+    port=3308, 
+    user='criptocoin',
     db='criptos_coins',
-    password='drkchain0205', 
+    password='75ckQeI9IW', 
     cursorclass=pymysql.cursors.DictCursor
     )
 
@@ -23,10 +24,10 @@ def BdiceDB():
     # prepare to cursor method .cursor()
     with con.cursor() as c:
         # consult create
-        sql = "SELECT URL from coins"
+        sql = "select * from coins;"
         c.execute(sql)
         res = c.fetchone()
-        url_coin = res['URL']
+        url_coin = res['url']
         
         # VERIFICA SE A CONEXÃO FOI REALIZADA COM SUCESSO
         html = requests.get(url_coin)
