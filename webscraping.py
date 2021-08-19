@@ -1,9 +1,6 @@
-import schedule
 import time
 import pymysql.cursors
 import requests 
-import json
-import time
 from datetime import date, datetime
 from pytz import timezone
 from requisicao import response
