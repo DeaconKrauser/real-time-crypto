@@ -8,11 +8,11 @@ from bs4 import BeautifulSoup
 
 # CONEXÃO COM O BANCO DE DADOS
 con = pymysql.connect(
-    host='35.247.240.81',
+    host='0.0.0.0',
     port=3308, 
     user='criptocoin',
     db='criptos_coins',
-    password='75ckQeI9IW', 
+    password='pass', 
     cursorclass=pymysql.cursors.DictCursor
     )
 
